@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felimon Jimenez | Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #a855f7;
+      --card: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.08), transparent 25%),
+                  radial-gradient(circle at 80% 0%, rgba(168, 85, 247, 0.10), transparent 30%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+    }
+    .nav {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    nav a:hover { color: var(--accent); }
+    .hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 96px 24px 72px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .hero h1 {
+      margin: 0 0 16px;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.1;
+    }
+    .hero p { margin: 0 0 24px; color: var(--muted); }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #0b1021;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(56, 189, 248, 0.35); }
+    .card-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(148, 163, 184, 0.1);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    }
+    h2 { margin: 0 0 12px; }
+    .muted { color: var(--muted); margin: 0 0 16px; }
+    ul { padding-left: 18px; margin: 0; }
+    li { margin-bottom: 8px; }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding-top: 72px; }
+      nav a { margin-left: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">Felimon Jimenez</div>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div>
+        <h1>Felimon Jimenez</h1>
+        <p>Data scientist combining statistical analysis, AI collaboration, and real-world problem-solving. TripleTen graduate with Criminal Justice background—pattern recognition meets hypothesis-driven insights.</p>
+        <a class="cta" href="#about">Explore my work</a>
+      </div>
+      <div class="card">
+        <h2>What Sets Me Apart</h2>
+        <p class="muted">AI-accelerated workflows, behavioral pattern recognition, and pressure-tested decision-making.</p>
+        <ul>
+          <li><strong>AI as Force Multiplier:</strong> Reduced analysis time through AI-assisted debugging & hypothesis generation</li>
+          <li><strong>Pattern Recognition:</strong> Identify insights others overlook—from customer behavior to data anomalies</li>
+          <li><strong>Workflow Optimization:</strong> Retail/hospitality experience → efficient data pipelines</li>
+          <li><strong>Clear Communication:</strong> Translate technical findings for non-technical stakeholders</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card-grid" id="about">
+      <div class="card">
+        <h2>About Me</h2>
+        <p class="muted">Data scientist combining statistical rigor with AI-accelerated workflows to deliver actionable insights under pressure.</p>
+        <p>Pattern recognition, hypothesis-driven analysis, and optimized workflows define my approach. Before TripleTen, I honed coordination and efficiency in retail/hospitality—managing peak-hour workflows, prioritizing tasks through service gaps, and applying behavioral analysis to improve customer experience. These skills translate directly to data work: problem-solving under constraints, recognizing patterns others miss, and making analytical decisions that enhance long-term performance.</p>
+      </div>
+      
+      <div class="card">
+        <h2>Education & Critical Thinking</h2>
+        <p class="muted">Rigorous foundation in theory, risk assessment, and global collaboration.</p>
+        <ul>
+          <li><strong>TripleTen Data Science Bootcamp</strong> – Python, SQL, hypothesis testing, ML pipelines</li>
+          <li><strong>Criminal Justice 300</strong> – Collaborative book presentation: <em>Those Who Labor for My Happiness: Slavery at Thomas Jefferson's Monticello</em></li>
+          <li><strong>Criminal Justice 230: Crime, Data, & Analysis</strong> – Comparative law, incarceration trends, policing variations worldwide</li>
+          <li>Maintained open communication and critical thinking through remote learning during COVID-19</li>
+        </ul>
+      </div>
+
+      <div class="card" id="skills">
+        <h2>Technical Skills</h2>
+        <p class="muted">Data science stack optimized for speed and accuracy.</p>
+        <ul>
+          <li><strong>Core:</strong> Python (Pandas, NumPy), SQL, statistical analysis</li>
+          <li><strong>Visualization:</strong> Matplotlib, Seaborn, Plotly</li>
+          <li><strong>ML:</strong> Scikit-learn, hypothesis testing, model evaluation</li>
+          <li><strong>AI Collaboration (Force Multiplier):</strong> Accelerated debugging, workflow optimization, hypothesis validation, pattern detection</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>AI as a Force Multiplier</h2>
+        <p class="muted">Leveraging AI tools to accelerate technical work and maintain quality.</p>
+        <ul>
+          <li><strong>Python debugging & optimization:</strong> AI-assisted data cleaning workflows reduce analysis time while maintaining accuracy</li>
+          <li><strong>Statistical validation:</strong> AI collaboration to validate interpretations and refine hypothesis testing approaches</li>
+          <li><strong>EDA enhancement:</strong> Integrate AI tools to identify pattern anomalies and generate visual strategies</li>
+          <li><strong>Quantifiable impact:</strong> Reduced analysis time, generated hypothesis variations leading to statistically significant findings</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Featured Projects</h2>
+        <p class="muted">Real-world data analysis demonstrating end-to-end workflows.</p>
+        <p><strong>Statistical Analysis: Telecom Plan Revenue Optimization</strong><br>
+        Analyzed 500 Megaline customers across Surf and Ultimate prepaid plans. Applied Welch's t-test to compare average monthly revenue, tested regional differences (NY-NJ vs other areas). Cleaned 137K+ call records, 76K+ messages, 104K+ sessions. Key insights: data aggregation by user-month, billing rule implementation, hypothesis testing with α=0.05. <em>Result: Statistically significant revenue differences identified to inform ad budget allocation.</em></p>
+        
+        <p><strong>Exploratory Data Analysis</strong> (additional notebook-based projects available upon request)</p>
+      </div>
+
+      <div class="card">
+        <h2>Professional Strengths</h2>
+        <p class="muted">Transferable skills from retail/hospitality → data science.</p>
+        <ul>
+          <li><strong>Workflow optimization:</strong> Shift priorities during peak hours, task prioritization during breaks—applied to data pipeline efficiency</li>
+          <li><strong>Communication under pressure:</strong> Reduce confusion, enhance coordination, minimize wait times → clear stakeholder reporting</li>
+          <li><strong>Behavioral analysis:</strong> Customer experience attunement → user behavior pattern recognition in data</li>
+          <li><strong>Analytical decision-making:</strong> Improve long-term performance through pattern recognition and process optimization</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
